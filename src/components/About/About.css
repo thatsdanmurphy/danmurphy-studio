@@ -1,0 +1,8 @@
+/* src/components/About/About.css */
+
+/* No special layout needed: .measure already provides the column.
+   Keep this file for future tweaks without dead selectors. */
+
+.about h2 {
+  margin-top: 0;
+}

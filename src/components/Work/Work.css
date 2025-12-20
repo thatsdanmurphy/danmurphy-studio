@@ -1,0 +1,165 @@
+/* src/components/Work/Work.css */
+
+/* ===========
+   Work list
+   =========== */
+
+.work__title {
+  margin: 0 0 var(--space-4);
+}
+
+.work__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.work__item {
+  font-size: var(--font-size-lg);
+  font-weight: 400;
+  text-align: left;
+}
+
+.work__spacer {
+  height: var(--space-4);
+}
+
+/* ===========
+   Modal – editorial takeover
+   =========== */
+
+.work-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  background: var(--color-bg);
+  color: var(--color-ink);
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.work-modal__shell {
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter) var(--space-6);
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.work-modal__top {
+  flex: 0 0 auto;
+  padding: var(--space-5) 0 var(--space-4);
+}
+
+.work-modal__top-inner {
+  max-width: 48rem;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.work-modal__titleblock {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-4);
+}
+
+.work-modal__project {
+  font-weight: 500;
+  line-height: var(--line-tight);
+}
+
+.work-modal__count {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-1);
+
+  font-size: var(--font-size-sm);
+  opacity: 0.7;
+}
+
+.work-modal__close {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-tight);
+  white-space: nowrap;
+}
+
+.work-modal__main {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.work-modal__main--center {
+  justify-content: center;
+}
+
+.work-modal__image-wrap {
+  width: 100%;
+  max-width: 48rem;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-modal__image-wrap img {
+  display: block;
+
+  max-width: 100%;
+  max-height: 68vh;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+  box-shadow: var(--shadow-artwork);
+}
+
+.work-modal__caption {
+  width: 100%;
+  margin-top: var(--space-3);
+
+  text-align: center;
+  font-size: var(--font-size-xs);
+  opacity: 0.55;
+  letter-spacing: 0.01em;
+}
+
+.work-modal__controls {
+  flex: 0 0 auto;
+  padding: var(--space-5) 0 var(--space-4);
+}
+
+.work-modal__controls-inner {
+  max-width: 48rem;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+}
+
+/* optional: slightly nicer tap targets without changing visuals */
+.work-modal__link {
+  font-size: var(--font-size-lg);
+  padding: var(--space-2) 0;
+}

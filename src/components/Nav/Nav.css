@@ -1,0 +1,56 @@
+/* ===========
+   Masthead
+   =========== */
+
+.site-header {
+  padding: var(--space-5) var(--gutter);
+}
+
+.site-header__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  column-gap: var(--space-5);
+  white-space: nowrap;
+}
+
+.site-header__name {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+  line-height: var(--line-tight);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* Optional nav */
+.site-nav {
+  display: flex;
+  column-gap: var(--space-4);
+}
+
+.site-nav__link {
+  font-weight: 300;
+  font-size: var(--font-size-lg);
+}
+
+.site-header__name {
+  margin: 0; /* important for h1 */
+}
+
+/* Accessible skip link */
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-120%);
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-bg);
+  color: var(--color-ink);
+  border: 1px solid var(--color-border);
+  z-index: 2000;
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}

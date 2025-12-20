@@ -1,0 +1,339 @@
+/* ===========
+   Reset / Base
+   =========== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --baseline: 4px;
+
+  /* Spacing scale */
+  --space-1: calc(var(--baseline) * 1);  /* 4px */
+  --space-2: calc(var(--baseline) * 2);  /* 8px */
+  --space-3: calc(var(--baseline) * 3);  /* 12px */
+  --space-4: calc(var(--baseline) * 4);  /* 16px */
+  --space-5: calc(var(--baseline) * 6);  /* 24px */
+  --space-6: calc(var(--baseline) * 8);  /* 32px */
+  --space-7: calc(var(--baseline) * 12); /* 48px */
+  --space-8: calc(var(--baseline) * 16); /* 64px */
+
+  /* Colors */
+  --color-bg: #f3f3f0;
+  --color-ink: #111111;
+  --color-muted: #666666;
+  --color-border: #dedede;
+  --color-accent: #d26a5b;
+
+  /* Typography */
+  --font-sans: "Inter Tight", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "DM Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  --font-size-xs: 0.6875rem; /* 11px */
+  --font-size-sm: 0.75rem;   /* 12px */
+  --font-size-md: 0.875rem;  /* 14px */
+  --font-size-lg: 1rem;      /* 16px */
+  --font-size-xl: 1.25rem;   /* 20px */
+  --font-size-2xl: 1.5rem;   /* 24px */
+
+  --line-tight: 1.2;
+  --line-normal: 1.5;
+
+  --page-max-width: 64rem; /* ~1024px */
+
+  /* A single, consistent reading width */
+  --measure: 44rem; /* tweak: 40–48 depending on taste */
+
+  --shadow-artwork:
+    0 2px 6px rgba(0, 0, 0, 0.12),
+    0 10px 24px rgba(0, 0, 0, 0.08);
+
+  /* Layout gutter (mobile override below) */
+  --gutter: var(--space-4); /* 16px desktop default */
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-normal);
+  color: var(--color-ink);
+  background-color: var(--color-bg);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===========
+   Accessibility: focus + skip link
+   =========== */
+
+/* Strong default focus ring for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* Avoid focus rings on mouse click in browsers that support it */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Skip link (paired with <a class="skip-link" href="#main"> in Nav) */
+
+.skip-link {
+  position: absolute;
+  left: var(--gutter);
+  top: var(--space-4);
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-ink);
+  color: var(--color-bg);
+  border-radius: 6px;
+  text-decoration: none;
+  transform: translateY(-200%);
+  transition: transform 120ms ease;
+  z-index: 9999;
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+/* ===========
+   Layout helpers
+   =========== */
+
+.page {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: var(--space-5) var(--gutter);
+
+  /* vertical rhythm without margin-collapsing */
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
+}
+
+/* Keep .section semantic; don’t rely on margins for spacing */
+.section {
+  margin: 0;
+}
+
+/* Reading column helper */
+.measure {
+  max-width: var(--measure);
+  margin: 0 auto;
+}
+
+/* Optional: a “tight column” */
+.measure--wide {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+/* ===========
+   Typography
+   =========== */
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: var(--line-tight);
+}
+
+h1 {
+  font-size: var(--font-size-xl); /* 20px */
+}
+
+h2 {
+  font-size: var(--font-size-sm); /* 12px */
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 var(--space-4);
+  opacity: 0.85;
+}
+
+h3 {
+  font-size: var(--font-size-xs); /* 11px */
+  font-weight: 600;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  margin: 0 0 var(--space-3);
+  opacity: 0.85;
+}
+
+p {
+  margin: 0;
+}
+
+/* Paragraph rhythm */
+p + p {
+  margin-top: var(--space-4);
+}
+
+/* Muted utility */
+.muted {
+  color: var(--color-muted);
+}
+
+/* Mono utility */
+.mono {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-tight);
+  color: var(--color-muted);
+}
+
+/* ===========
+   Interactive text / links
+   =========== */
+
+.link {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+
+  font: inherit;
+  color: var(--color-ink);
+  cursor: pointer;
+
+  /* Default underline */
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+/* Hover can remove underline */
+.link:hover {
+  text-decoration: none;
+}
+
+/* Keep focus readable (focus ring is handled globally) */
+.link:active {
+  opacity: 0.75;
+}
+
+/* ===========
+   Form basics
+   =========== */
+
+.input {
+  width: 100%;
+  font: inherit;
+  color: var(--color-ink);
+  background: transparent;
+
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+
+  padding: var(--space-3);
+  line-height: var(--line-normal);
+}
+
+.input::placeholder {
+  color: var(--color-muted);
+}
+
+.input:focus {
+  outline: none; /* we rely on :focus-visible for the ring */
+  border-color: var(--color-ink);
+}
+
+.button {
+  font: inherit;
+  color: var(--color-ink);
+  background: transparent;
+
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+
+  padding: var(--space-3) var(--space-4);
+  cursor: pointer;
+}
+
+.button:hover {
+  border-color: var(--color-ink);
+}
+
+.button:active {
+  opacity: 0.75;
+}
+
+/* ===========
+   Figure basics
+   =========== */
+
+.figure {
+  margin: 0;
+}
+
+.figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.figure-caption {
+  margin-top: var(--space-2);
+}
+
+/* ===========
+   Available section shell (global)
+   =========== */
+
+.available-shell {
+  padding: 0 var(--gutter) var(--space-6);
+}
+
+.available-shell .measure {
+  border-top: 1px solid var(--color-border);
+}
+
+/* ===========
+   Responsive
+   =========== */
+
+@media (max-width: 768px) {
+  :root {
+    --measure: 100%;
+    --gutter: 32px;
+  }
+
+  .page {
+    padding: var(--space-5) var(--gutter);
+    gap: var(--space-6);
+  }
+
+  .available-shell {
+    padding: 0 var(--gutter) var(--space-6);
+  }
+}
+
+/* ===========
+   Reduced motion
+   =========== */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
