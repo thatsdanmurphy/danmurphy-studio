@@ -48,17 +48,14 @@ body {
   --line-tight: 1.2;
   --line-normal: 1.5;
 
-  --page-max-width: 64rem; /* ~1024px */
-
-  /* A single, consistent reading width */
-  --measure: 44rem; /* tweak: 40–48 depending on taste */
+  --page-max-width: 64rem;
+  --measure: 44rem;
 
   --shadow-artwork:
     0 2px 6px rgba(0, 0, 0, 0.12),
     0 10px 24px rgba(0, 0, 0, 0.08);
 
-  /* Layout gutter (mobile override below) */
-  --gutter: var(--space-4); /* 16px desktop default */
+  --gutter: var(--space-4);
 }
 
 body {
@@ -73,21 +70,17 @@ body {
 }
 
 /* ===========
-   Accessibility: focus + skip link
+   Accessibility
    =========== */
 
-/* Strong default focus ring for keyboard users */
 :focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 3px;
 }
 
-/* Avoid focus rings on mouse click in browsers that support it */
 :focus:not(:focus-visible) {
   outline: none;
 }
-
-/* Skip link (paired with <a class="skip-link" href="#main"> in Nav) */
 
 .skip-link {
   position: absolute;
@@ -115,25 +108,20 @@ body {
   max-width: var(--page-max-width);
   margin: 0 auto;
   padding: var(--space-5) var(--gutter);
-
-  /* vertical rhythm without margin-collapsing */
   display: flex;
   flex-direction: column;
   gap: var(--space-7);
 }
 
-/* Keep .section semantic; don’t rely on margins for spacing */
 .section {
   margin: 0;
 }
 
-/* Reading column helper */
 .measure {
   max-width: var(--measure);
   margin: 0 auto;
 }
 
-/* Optional: a “tight column” */
 .measure--wide {
   max-width: 48rem;
   margin: 0 auto;
@@ -155,43 +143,30 @@ h4 {
   line-height: var(--line-tight);
 }
 
-h1 {
-  font-size: var(--font-size-xl); /* 20px */
-}
+h1 { font-size: var(--font-size-xl); }
 
 h2 {
-  font-size: var(--font-size-sm); /* 12px */
+  font-size: var(--font-size-sm);
   font-weight: 600;
   letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin: 0 0 var(--space-4);
   opacity: 0.85;
 }
 
 h3 {
-  font-size: var(--font-size-xs); /* 11px */
+  font-size: var(--font-size-xs);
   font-weight: 600;
   letter-spacing: 0.10em;
-  text-transform: uppercase;
-  margin: 0 0 var(--space-3);
   opacity: 0.85;
 }
 
-p {
-  margin: 0;
-}
+p { margin: 0; }
 
-/* Paragraph rhythm */
 p + p {
   margin-top: var(--space-4);
 }
 
-/* Muted utility */
-.muted {
-  color: var(--color-muted);
-}
+.muted { color: var(--color-muted); }
 
-/* Mono utility */
 .mono {
   font-family: var(--font-mono);
   font-size: var(--font-size-xs);
@@ -200,7 +175,7 @@ p + p {
 }
 
 /* ===========
-   Interactive text / links
+   Links
    =========== */
 
 .link {
@@ -208,24 +183,19 @@ p + p {
   background: none;
   padding: 0;
   margin: 0;
-
   font: inherit;
   color: var(--color-ink);
   cursor: pointer;
-
-  /* Default underline */
   text-decoration: underline;
   text-decoration-color: var(--color-accent);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.18em;
 }
 
-/* Hover can remove underline */
 .link:hover {
   text-decoration: none;
 }
 
-/* Keep focus readable (focus ring is handled globally) */
 .link:active {
   opacity: 0.75;
 }
@@ -239,10 +209,8 @@ p + p {
   font: inherit;
   color: var(--color-ink);
   background: transparent;
-
   border: 1px solid var(--color-border);
   border-radius: 4px;
-
   padding: var(--space-3);
   line-height: var(--line-normal);
 }
@@ -252,18 +220,41 @@ p + p {
 }
 
 .input:focus {
-  outline: none; /* we rely on :focus-visible for the ring */
+  outline: none;
   border-color: var(--color-ink);
+}
+
+/* --- Editorial underline input variant --- */
+.input--line {
+  border: 0;
+  border-bottom: 1px solid var(--color-border);
+  border-radius: 0;
+  padding: 0.25rem 0;
+  background: transparent;
+  outline: none;
+  transition: border-bottom-color 120ms linear;
+}
+
+.input--line:focus,
+.input--line:focus-visible {
+  outline: none;
+  border-bottom-color: var(--color-accent);
+}
+
+/* --- Quiet inline helper / validation text --- */
+.field-note {
+  margin-top: var(--space-2);
+  font-size: var(--font-size-md);
+  line-height: var(--line-normal);
+  color: var(--color-muted);
 }
 
 .button {
   font: inherit;
   color: var(--color-ink);
   background: transparent;
-
   border: 1px solid var(--color-border);
   border-radius: 4px;
-
   padding: var(--space-3) var(--space-4);
   cursor: pointer;
 }
@@ -277,12 +268,10 @@ p + p {
 }
 
 /* ===========
-   Figure basics
+   Figures
    =========== */
 
-.figure {
-  margin: 0;
-}
+.figure { margin: 0; }
 
 .figure img {
   display: block;
@@ -295,7 +284,7 @@ p + p {
 }
 
 /* ===========
-   Available section shell (global)
+   Available shell
    =========== */
 
 .available-shell {
@@ -324,6 +313,26 @@ p + p {
   .available-shell {
     padding: 0 var(--gutter) var(--space-6);
   }
+}
+
+/* Kill browser focus / autofill background on inputs */
+input,
+textarea {
+  background-color: transparent;
+}
+
+input:focus,
+textarea:focus {
+  background-color: transparent;
+}
+
+/* Chrome / Safari autofill */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  -webkit-text-fill-color: var(--color-ink);
+  transition: background-color 9999s ease-out;
 }
 
 /* ===========

@@ -4,47 +4,18 @@
   height: var(--space-4);
 }
 
-.notes__form {
+.notes__form,
+.notes__success {
   margin-top: var(--space-3);
   max-width: 32rem; /* feels like a field, not a new section */
-}
-
-.notes__label {
-  display: block;
-  font-size: var(--font-size-md);
-  color: var(--color-muted);
-  margin-bottom: var(--space-2);
-}
-
-.notes__input {
-  width: 100%;
-  border: none;
-  background: transparent;
-  padding: 0;
-
-  font-family: var(--font-sans);
-  font-size: var(--font-size-lg);
-  line-height: var(--line-normal);
-  color: var(--color-ink);
-}
-
-.notes__input::placeholder {
-  color: var(--color-muted);
-}
-
-/* Keep a clear focus state (pairs well with your global :focus-visible ring) */
-.notes__input:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 4px;
-}
-
-.notes__rule {
-  height: 1px;
-  background-color: var(--color-border);
-  margin: var(--space-2) 0 var(--space-3);
 }
 
 .notes__actions {
   display: flex;
   gap: var(--space-4);
+  margin-top: var(--space-3);
+}
+
+.notes__success p {
+  color: var(--color-muted);
 }

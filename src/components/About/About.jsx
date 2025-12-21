@@ -9,14 +9,8 @@ export default function About() {
         <h2>Statement</h2>
 
         <p>
-          I paint from observation, memory, and photographs. The work is slow.
-          I tend to return to the same subjects over time.
-        </p>
-
-        <p>
-          Cars, trucks, boats, scenes around Boston, or pulled from film; simple
-          things that begin to feel staged when you look at them long enough.
-          I’m interested in quiet light, strong color, and the edges of the image.
+          I paint from observation, memory, and photographs.
+I've returned to the similar subjects over time: classical reproductions, overlooked scenes around Boston, and old vehicles, all connected by color and light.
         </p>
       </div>
     </section>

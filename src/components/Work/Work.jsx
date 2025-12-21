@@ -184,7 +184,7 @@ export default function Work({ isAvailableOpen = false }) {
               </button>
             </li>
           ))}
-
+{/*
           <li aria-hidden="true" className="work__spacer" />
 
           <li>
@@ -192,6 +192,7 @@ export default function Work({ isAvailableOpen = false }) {
               Available Work ↓
             </a>
           </li>
+          */}
         </ul>
       </div>
 
