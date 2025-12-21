@@ -29,11 +29,11 @@ const PROJECTS = [
     id: "mail-trucks",
     title: "Mail Trucks",
     images: [
-      { src: "/assets/mail trucks/89303-Regina.webp", title: "Regina" },
-      { src: "/assets/mail trucks/89305-Wanderer.webp", title: "Wanderer" },
-      { src: "/assets/mail trucks/89306-Lonestar.webp", title: "Lonestar" },
-      { src: "/assets/mail trucks/89307-Ray.webp", title: "Ray" },
-      { src: "/assets/mail trucks/89308-Redd.webp", title: "Redd" },
+      { src: "/assets/mail-trucks/89303-Regina.webp", title: "Regina" },
+      { src: "/assets/mail-trucks/89305-Wanderer.webp", title: "Wanderer" },
+      { src: "/assets/mail-trucks/89306-Lonestar.webp", title: "Lonestar" },
+      { src: "/assets/mail-trucks/89307-Ray.webp", title: "Ray" },
+      { src: "/assets/mail-trucks/89308-Redd.webp", title: "Redd" },
     ],
   },
   {
