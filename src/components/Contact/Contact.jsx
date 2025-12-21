@@ -3,7 +3,7 @@ import React from "react";
 import "./Contact.css";
 
 export default function Contact() {
-  const email = "dmurphy.dpm@gmail.com";
+  const email = "hello@danmurphy.studio";
 
   return (
     <section id="contact" className="section contact">
