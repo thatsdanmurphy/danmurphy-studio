@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import Nav from "./components/Nav/Nav";
 import Work from "./components/Work/Work";
 import About from "./components/About/About";
@@ -12,6 +13,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Nav />
+
       <main id="main" className="page">
         <Routes>
           <Route
@@ -30,6 +32,9 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
+
+      {/* ✅ Vercel Analytics – mount once */}
+      <Analytics />
     </BrowserRouter>
   );
 }
