@@ -10,7 +10,7 @@ export default function About() {
 
         <p>
           I paint from observation, memory, and photographs.
-I've returned to the similar subjects over time: classical reproductions, overlooked scenes around Boston, and old vehicles, all connected by color and light.
+I tend to come back to similar subjects: classical reproductions, overlooked scenes around Boston, and old vehicles, all connected by color and light.
         </p>
       </div>
     </section>
