@@ -4,6 +4,18 @@ import "./Work.css";
 
 const PROJECTS = [
   {
+    id: "overpasses",
+    title: "Overpasses",
+    year: "2026",
+    images: [
+      { src: "/assets/overpasses/89501-Twin-Bridges-11x14-Summer26.jpg", title: "Twin Bridges" },
+      { src: "/assets/overpasses/89502-Trestle-11x14-Summer26.jpg", title: "Trestle" },
+      { src: "/assets/overpasses/89503-On-Ramp-11x14-Summer26.jpg", title: "On Ramp" },
+      { src: "/assets/overpasses/89504-The-Bend-11x14-Summer26.jpg", title: "The Bend" },
+      { src: "/assets/overpasses/89505-Evening-Arch-11x14-Summer26.jpg", title: "Evening Arch" },
+    ],
+  },
+  {
     id: "on-the-sea",
     title: "On the Sea",
     year: "2025",
@@ -43,18 +55,6 @@ const PROJECTS = [
     images: [
       { src: "/assets/film/89201-Big-Fish.webp", title: "Big Fish" },
       { src: "/assets/film/89202-Tombstone.webp", title: "Tombstone" },
-    ],
-  },
-  {
-    id: "overpasses",
-    title: "Overpasses",
-    year: "2026",
-    images: [
-      { src: "/assets/overpasses/89501-Twin-Bridges-11x14-Summer26.jpg", title: "Twin Bridges" },
-      { src: "/assets/overpasses/89502-Trestle-11x14-Summer26.jpg", title: "Trestle" },
-      { src: "/assets/overpasses/89503-On-Ramp-11x14-Summer26.jpg", title: "On Ramp" },
-      { src: "/assets/overpasses/89504-The-Bend-11x14-Summer26.jpg", title: "The Bend" },
-      { src: "/assets/overpasses/89505-Evening-Arch-11x14-Summer26.jpg", title: "Evening Arch" },
     ],
   },
 ];
