@@ -8,11 +8,11 @@ const PROJECTS = [
     title: "Overpasses",
     year: "2026",
     images: [
-      { src: "/assets/overpasses/89501-Twin-Bridges-11x14-Summer26.jpg", title: "Twin Bridges" },
+      { src: "/assets/overpasses/89501-Twin-Bridges-12x16-Summer26.jpg", title: "Twin Bridges" },
       { src: "/assets/overpasses/89502-The-Pier-11x14-Summer26.jpg", title: "The Pier" },
-      { src: "/assets/overpasses/89503-On-Ramp-11x14-Summer26.jpg", title: "On Ramp" },
-      { src: "/assets/overpasses/89504-The-Bend-11x14-Summer26.jpg", title: "The Bend" },
-      { src: "/assets/overpasses/89505-Evening-Arch-11x14-Summer26.jpg", title: "Evening Arch" },
+      { src: "/assets/overpasses/89503-On-Ramp-12x16-Summer26.jpg", title: "On Ramp" },
+      { src: "/assets/overpasses/89504-The-Bend-12x16-Summer26.jpg", title: "The Bend" },
+      { src: "/assets/overpasses/89505-Evening-Arch-12x16-Summer26.jpg", title: "Evening Arch" },
     ],
   },
   {

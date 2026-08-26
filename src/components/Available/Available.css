@@ -73,9 +73,6 @@
   width: 100%;
   height: auto;
 
-  aspect-ratio: 4 / 5;
-  object-fit: contain;
-
   background: rgba(0, 0, 0, 0.02);
   box-shadow: var(--shadow-artwork);
 }

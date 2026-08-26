@@ -11,8 +11,8 @@ const GROUPS = [
       {
         id: "on-ramp",
         title: "On Ramp",
-        src: "/assets/overpasses/89503-On-Ramp-11x14-Summer26.jpg",
-        size: "11×14",
+        src: "/assets/overpasses/89503-On-Ramp-12x16-Summer26.jpg",
+        size: "12×16",
         price: 200,
         status: "Available",
         note: "Oil on canvas.",
@@ -20,8 +20,8 @@ const GROUPS = [
       {
         id: "twin-bridges",
         title: "Twin Bridges",
-        src: "/assets/overpasses/89501-Twin-Bridges-11x14-Summer26.jpg",
-        size: "11×14",
+        src: "/assets/overpasses/89501-Twin-Bridges-12x16-Summer26.jpg",
+        size: "12×16",
         price: 200,
         status: "Available",
         note: "Oil on canvas.",
@@ -29,8 +29,8 @@ const GROUPS = [
       {
         id: "the-bend",
         title: "The Bend",
-        src: "/assets/overpasses/89504-The-Bend-11x14-Summer26.jpg",
-        size: "11×14",
+        src: "/assets/overpasses/89504-The-Bend-12x16-Summer26.jpg",
+        size: "12×16",
         price: 200,
         status: "Available",
         note: "Oil on canvas.",
