@@ -9,6 +9,33 @@ const GROUPS = [
     title: "Originals",
     pieces: [
       {
+        id: "on-ramp",
+        title: "On Ramp",
+        src: "/assets/overpasses/89503-On-Ramp-11x14-Summer26.jpg",
+        size: "11×14",
+        price: 200,
+        status: "Available",
+        note: "Oil on canvas.",
+      },
+      {
+        id: "twin-bridges",
+        title: "Twin Bridges",
+        src: "/assets/overpasses/89501-Twin-Bridges-11x14-Summer26.jpg",
+        size: "11×14",
+        price: 200,
+        status: "Available",
+        note: "Oil on canvas.",
+      },
+      {
+        id: "the-bend",
+        title: "The Bend",
+        src: "/assets/overpasses/89504-The-Bend-11x14-Summer26.jpg",
+        size: "11×14",
+        price: 200,
+        status: "Available",
+        note: "Oil on canvas.",
+      },
+      {
         id: "fog-boat",
         title: "Froth and the Fog",
         src: "/assets/boats/89401-Froth-Fog-16x20.jpeg",
